@@ -203,7 +203,7 @@
         <section class="design-tools">
             <div class="container">
                 <div class="section-title">
-                    <h2>Design Tools</h2>
+                    <h2>Design Arsenal</h2>
                 </div>
                 <div class="tools-container">
                     <div class="tool-item">
@@ -750,6 +750,33 @@
             </div>
         </footer>
 
+        <!-- Project Modal -->
+        <div class="modal" id="projectModal">
+            <div class="modal-content">
+                <button class="modal-close" id="modalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="modal-nav">
+                    <button class="modal-nav-btn" id="modalPrev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="modal-nav-btn" id="modalNext">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <img
+                    class="modal-image"
+                    id="modalImage"
+                    src=""
+                    alt="Project Image"
+                />
+                <div class="modal-caption">
+                    <h3 id="modalTitle">Project Title</h3>
+                    <p id="modalDescription">Project description goes here</p>
+                </div>
+            </div>
+        </div>
+
         <script>
             // Navigation scroll effect
             window.addEventListener("scroll", function () {
@@ -876,6 +903,96 @@
                         "Sorry, there was an error sending your message. Please try again.";
                     document.getElementById("formMessage").className =
                         "form-message error";
+                }
+            });
+
+            // Project Modal Functionality
+            const modal = document.getElementById("projectModal");
+            const modalImage = document.getElementById("modalImage");
+            const modalTitle = document.getElementById("modalTitle");
+            const modalDescription =
+                document.getElementById("modalDescription");
+            const modalClose = document.getElementById("modalClose");
+            const modalPrev = document.getElementById("modalPrev");
+            const modalNext = document.getElementById("modalNext");
+
+            // Store all project cards for navigation
+            const allProjectCards = Array.from(
+                document.querySelectorAll(".project-card")
+            );
+            let currentProjectIndex = 0;
+
+            // Add click event to each project card
+            projectCards.forEach((card, index) => {
+                card.addEventListener("click", () => {
+                    openModal(index);
+                });
+            });
+
+            // Function to open modal with specific project
+            function openModal(index) {
+                currentProjectIndex = index;
+                const card = allProjectCards[index];
+                const img = card.querySelector("img");
+                const title = card.querySelector("h3").textContent;
+                const description = card.querySelector("p").textContent;
+
+                modalImage.src = img.src;
+                modalImage.alt = img.alt;
+                modalTitle.textContent = title;
+                modalDescription.textContent = description;
+
+                modal.classList.add("active");
+                document.body.style.overflow = "hidden";
+            }
+
+            // Close modal
+            modalClose.addEventListener("click", () => {
+                modal.classList.remove("active");
+                document.body.style.overflow = "auto";
+            });
+
+            // Close modal when clicking outside the content
+            modal.addEventListener("click", (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove("active");
+                    document.body.style.overflow = "auto";
+                }
+            });
+
+            // Navigate to previous project
+            modalPrev.addEventListener("click", (e) => {
+                e.stopPropagation();
+                currentProjectIndex =
+                    (currentProjectIndex - 1 + allProjectCards.length) %
+                    allProjectCards.length;
+                openModal(currentProjectIndex);
+            });
+
+            // Navigate to next project
+            modalNext.addEventListener("click", (e) => {
+                e.stopPropagation();
+                currentProjectIndex =
+                    (currentProjectIndex + 1) % allProjectCards.length;
+                openModal(currentProjectIndex);
+            });
+
+            // Keyboard navigation
+            document.addEventListener("keydown", (e) => {
+                if (modal.classList.contains("active")) {
+                    if (e.key === "Escape") {
+                        modal.classList.remove("active");
+                        document.body.style.overflow = "auto";
+                    } else if (e.key === "ArrowLeft") {
+                        currentProjectIndex =
+                            (currentProjectIndex - 1 + allProjectCards.length) %
+                            allProjectCards.length;
+                        openModal(currentProjectIndex);
+                    } else if (e.key === "ArrowRight") {
+                        currentProjectIndex =
+                            (currentProjectIndex + 1) % allProjectCards.length;
+                        openModal(currentProjectIndex);
+                    }
                 }
             });
         </script>
