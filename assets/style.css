@@ -67,6 +67,7 @@ section {
     text-transform: uppercase;
     letter-spacing: 2px;
     background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 10px rgba(0, 238, 255, 0.5);
@@ -165,6 +166,7 @@ header.scrolled {
 
 .logo span {
     background: linear-gradient(45deg, var(--neon-blue), var(--neon-pink));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 10px rgba(0, 238, 255, 0.5);
@@ -252,6 +254,7 @@ header.scrolled {
     opacity: 0;
     animation: fadeInUp 1s forwards 0.5s;
     background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple), var(--neon-pink));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 15px rgba(0, 238, 255, 0.5);
@@ -460,6 +463,7 @@ header.scrolled {
     margin-bottom: 20px;
     color: var(--text);
     background: linear-gradient(45deg, var(--neon-blue), var(--neon-green));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
