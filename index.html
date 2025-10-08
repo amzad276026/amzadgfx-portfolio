@@ -19,7 +19,7 @@
         <header id="header">
             <div class="container">
                 <nav class="navbar">
-                    <a href="#" class="logo">Amzad's<span>Portfolio</span></a>
+                    <a href="#" class="logo">Gfx<span>Amzad</span></a>
                     <ul class="nav-links">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
@@ -49,29 +49,149 @@
                 </div>
             </div>
             <div class="hero-image">
-                <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                    <path
+                <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <!-- Main gradient -->
+                        <linearGradient
+                            id="modernGradient"
+                            x1="0%"
+                            y1="0%"
+                            x2="100%"
+                            y2="100%"
+                        >
+                            <stop offset="0%" stop-color="#6C63FF" />
+                            <stop offset="100%" stop-color="#00C6FF" />
+                        </linearGradient>
+
+                        <!-- Soft shadow -->
+                        <filter
+                            id="softShadow"
+                            x="-20%"
+                            y="-20%"
+                            width="140%"
+                            height="140%"
+                        >
+                            <feDropShadow
+                                dx="0"
+                                dy="8"
+                                stdDeviation="12"
+                                flood-color="#6C63FF"
+                                flood-opacity="0.4"
+                            />
+                        </filter>
+
+                        <!-- Glow effect -->
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="20" result="blur" />
+                            <feMerge>
+                                <feMergeNode in="blur" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+
+                        <!-- Dotted pattern -->
+                        <pattern
+                            id="dots"
+                            x="0"
+                            y="0"
+                            width="10"
+                            height="10"
+                            patternUnits="userSpaceOnUse"
+                        >
+                            <circle
+                                cx="1"
+                                cy="1"
+                                r="1"
+                                fill="#6C63FF"
+                                opacity="0.2"
+                            />
+                        </pattern>
+                    </defs>
+
+                    <!-- Background glow -->
+                    <circle
+                        cx="400"
+                        cy="400"
+                        r="300"
+                        fill="url(#modernGradient)"
+                        opacity="0.08"
+                        filter="url(#glow)"
+                    />
+
+                    <!-- Decorative dotted area -->
+                    <rect
+                        x="100"
+                        y="100"
+                        width="200"
+                        height="200"
+                        fill="url(#dots)"
+                        opacity="0.3"
+                    />
+
+                    <!-- Floating circles -->
+                    <circle
+                        cx="650"
+                        cy="200"
+                        r="40"
+                        fill="url(#modernGradient)"
+                        opacity="0.25"
+                    />
+                    <circle
+                        cx="150"
+                        cy="600"
+                        r="25"
                         fill="#6C63FF"
-                        d="M447.5,308.5c-20.1,47.9-55.5,84.1-97.5,105.9c-42,21.8-90.6,29.2-138.5,21.1c-47.9-8.1-95.1-30.7-132.9-65.9
-                c-37.8-35.2-66.2-83-81.1-135.4c-14.9-52.4-16.3-109.4-3.7-162.8c12.6-53.4,39.3-103.2,77.1-143.5c37.8-40.3,86.7-71.1,140.1-89.2
-                c53.4-18.1,111.3-23.5,167.2-15.4c55.9,8.1,109.8,29.7,155.2,62.9c45.4,33.2,82.3,78,106.7,129.4c24.4,51.4,36.3,109.4,34.3,167.4
-                c-2,58-17.9,116-46.3,167.4c-28.4,51.4-69.2,96.2-117.2,129.4c-48,33.2-103.2,55-160.2,62.9c-57,7.9-115.9,1.5-169.9-18.1
-                c-54-19.6-103.1-53.4-142.1-97.5c-39-44.1-67.9-98.5-83.7-156.5c-15.8-58-18.5-119.6-7.7-179.2c10.8-59.6,35.3-117.2,71.7-166.2
-                c36.4-49,84.7-89.4,139.7-117.2c55-27.8,116.7-42.9,179.2-43.7c62.5-0.8,126,12.7,183,39.5c57,26.8,107.5,66.9,146.5,116.9
-                c39,50,66.5,109.9,79.5,173.4c13,63.5,11.5,130.5-4.5,193.5c-16,63-45.5,122-86.5,172c-41,50-93.5,91-152.5,119
-                c-59,28-124.5,43-190.5,43c-66,0-132-15-191-43c-59-28-111.5-69-152.5-119c-41-50-71-109-87-172c-16-63-17.5-130-4.5-193.5
-                c13-63.5,40.5-123.4,79.5-173.4c39-50,89.5-90.1,146.5-116.9c57-26.8,120.5-40.3,183-39.5c62.5,0.8,124.2,15.9,179.2,43.7
-                c55,27.8,103.3,68.2,139.7,117.2c36.4,49,60.9,106.6,71.7,166.2c10.8,59.6,8.1,121.2-7.7,179.2c-15.8,58-44.7,112.4-83.7,156.5
-                c-39,44.1-88.1,77.9-142.1,97.5c-54,19.6-112.9,26-169.9,18.1c-57-7.9-112.2-29.7-160.2-62.9c-48-33.2-88.8-78-117.2-129.4
-                c-28.4-51.4-44.3-109.4-46.3-167.4c-2-58,9.9-116,34.3-167.4c24.4-51.4,61.3-96.2,106.7-129.4c45.4-33.2,99.3-54.8,155.2-62.9
-                c55.9-8.1,113.8-2.7,167.2,15.4c53.4,18.1,102.3,48.9,140.1,89.2c37.8,40.3,64.5,90.1,77.1,143.5c12.6,53.4,11.2,110.4-3.7,162.8
-                c-14.9,52.4-43.3,100.2-81.1,135.4c-37.8,35.2-85,57.8-132.9,65.9c-47.9,8.1-96.5,0.7-138.5-21.1c-42-21.8-77.4-58-97.5-105.9"
+                        opacity="0.3"
+                    />
+
+                    <!-- Main modern blob -->
+                    <path
+                        transform="translate(100,100) scale(0.6)"
+                        fill="url(#modernGradient)"
+                        filter="url(#softShadow)"
+                        opacity="0.9"
+                        d="M447.5,308.5c-20.1,47.9-55.5,84.1-97.5,105.9
+       c-42,21.8-90.6,29.2-138.5,21.1c-47.9-8.1-95.1-30.7-132.9-65.9
+       c-37.8-35.2-66.2-83-81.1-135.4c-14.9-52.4-16.3-109.4-3.7-162.8
+       c12.6-53.4,39.3-103.2,77.1-143.5c37.8-40.3,86.7-71.1,140.1-89.2
+       c53.4-18.1,111.3-23.5,167.2-15.4c55.9,8.1,109.8,29.7,155.2,62.9
+       c45.4,33.2,82.3,78,106.7,129.4c24.4,51.4,36.3,109.4,34.3,167.4
+       c-2,58-17.9,116-46.3,167.4c-28.4,51.4-69.2,96.2-117.2,129.4
+       c-48,33.2-103.2,55-160.2,62.9c-57,7.9-115.9,1.5-169.9-18.1
+       c-54-19.6-103.1-53.4-142.1-97.5c-39-44.1-67.9-98.5-83.7-156.5
+       c-15.8-58-18.5-119.6-7.7-179.2c10.8-59.6,35.3-117.2,71.7-166.2
+       c36.4-49,84.7-89.4,139.7-117.2c55-27.8,116.7-42.9,179.2-43.7
+       c62.5-0.8,126,12.7,183,39.5c57,26.8,107.5,66.9,146.5,116.9
+       c39,50,66.5,109.9,79.5,173.4c13,63.5,11.5,130.5-4.5,193.5
+       c-16,63-45.5,122-86.5,172c-41,50-93.5,91-152.5,119
+       c-59,28-124.5,43-190.5,43c-66,0-132-15-191-43
+       c-59-28-111.5-69-152.5-119c-41-50-71-109-87-172
+       c-16-63-17.5-130-4.5-193.5c13-63.5,40.5-123.4,79.5-173.4
+       c39-50,89.5-90.1,146.5-116.9c57-26.8,120.5-40.3,183-39.5
+       c62.5,0.8,124.2,15.9,179.2,43.7c55,27.8,103.3,68.2,139.7,117.2
+       c36.4,49,60.9,106.6,71.7,166.2c10.8,59.6,8.1,121.2-7.7,179.2
+       c-15.8,58-44.7,112.4-83.7,156.5c-39,44.1-88.1,77.9-142.1,97.5
+       c-54,19.6-112.9,26-169.9,18.1c-57-7.9-112.2-29.7-160.2-62.9
+       c-48-33.2-88.8-78-117.2-129.4c-28.4-51.4-44.3-109.4-46.3-167.4
+       c-2-58,9.9-116,34.3-167.4c24.4-51.4,61.3-96.2,106.7-129.4
+       c45.4-33.2,99.3-54.8,155.2-62.9c55.9-8.1,113.8-2.7,167.2,15.4
+       c53.4,18.1,102.3,48.9,140.1,89.2c37.8,40.3,64.5,90.1,77.1,143.5
+       c12.6,53.4,11.2,110.4-3.7,162.8c-14.9,52.4-43.3,100.2-81.1,135.4
+       c-37.8,35.2-85,57.8-132.9,65.9c-47.9,8.1-96.5,0.7-138.5-21.1
+       c-42-21.8-77.4-58-97.5-105.9"
+                    />
+
+                    <!-- Accent gradient line -->
+                    <rect
+                        x="300"
+                        y="700"
+                        width="200"
+                        height="4"
+                        rx="2"
+                        fill="url(#modernGradient)"
+                        opacity="0.8"
                     />
                 </svg>
-            </div>
-            <div class="floating-shapes">
-                <div class="shape shape-1"></div>
-                <div class="shape shape-2"></div>
             </div>
         </section>
 
@@ -118,7 +238,7 @@
                         />
                     </div>
                     <div class="about-text">
-                        <h3>Hi, I'm Amzad</h3>
+                        <h3>👋 Hi, I'm Amzad</h3>
                         <p>
                             I’m a passionate Graphic Designer specializing in
                             Logo Design, YouTube Thumbnails, Social Media Posts,
@@ -266,21 +386,116 @@
                     <div class="project-card" data-category="Logo-Design">
                         <div class="project-img">
                             <img
-                                src="https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=772&q=80"
+                                src="assets/images/project-logo.png"
                                 alt="Brand Identity Project"
                             />
                         </div>
                         <div class="project-info">
-                            <h3>EcoLife Brand Identity</h3>
+                            <h3>AdTech Brand Identity</h3>
                             <p>
-                                Complete brand identity for an eco-friendly
-                                product line including logo, packaging, and
-                                marketing materials.
+                                Complete brand identity for an Brand Identity
+                                including logo, and marketing materials.
                             </p>
                             <div class="project-tags">
                                 <span>Logo Design</span>
-                                <span>Packaging</span>
+                                <span>Educational logo</span>
                                 <span>Brand Guidelines</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="project-card"
+                        data-category="Youtube-Thumbnail-Design"
+                    >
+                        <div class="project-img">
+                            <img
+                                src="assets/images/documentary-thumbnail.png"
+                                alt="Web Design Project"
+                            />
+                        </div>
+                        <div class="project-info">
+                            <h3>Documentary thumbnail</h3>
+                            <p>
+                                Discover real stories and untold truths through
+                                powerful visuals and emotional storytelling — a
+                                glimpse into the world that inspires thought and
+                                awareness.
+                            </p>
+                            <div class="project-tags">
+                                <span>Youtube thumbnail</span>
+                                <span>Documentary thumbnail</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="project-card"
+                        data-category="Youtube-Thumbnail-Design"
+                    >
+                        <div class="project-img">
+                            <img
+                                src="assets/images/edtech-thumbnail.jpg"
+                                alt="Gfx tips thumbnail"
+                            />
+                        </div>
+                        <div class="project-info">
+                            <h3>Gfx tips thumbnail</h3>
+                            <p>
+                                Eye-catching YouTube thumbnail showcasing
+                                creative graphic design tips
+                            </p>
+                            <div class="project-tags">
+                                <span>Youtube thumbnail</span>
+                                <span>Documentary thumbnail</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="project-card"
+                        data-category="Social-Media-Poster-Design"
+                    >
+                        <div class="project-img">
+                            <img
+                                src="assets/images/doctor-poster.jpg"
+                                alt="Print Design Project"
+                            />
+                        </div>
+                        <div class="project-info">
+                            <h3>Doctor Social Media Poster</h3>
+                            <p>
+                                Health tips and medical updates, creatively
+                                showcased for social media
+                            </p>
+                            <div class="project-tags">
+                                <span>SocialMediaPoster</span>
+                                <span>HealthcareDesign</span>
+                                <span>DoctorPoster</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="project-card"
+                        data-category="Youtube-Thumbnail-Design"
+                    >
+                        <div class="project-img">
+                            <img
+                                src="assets/images/codingtips.jpg"
+                                alt="Brand Identity Project"
+                            />
+                        </div>
+                        <div class="project-info">
+                            <h3>Coding Tips Thumbnail</h3>
+                            <p>
+                                Modern YouTube thumbnail featuring useful coding
+                                tips for developers.
+                            </p>
+                            <div class="project-tags">
+                                <span>CodingTips</span>
+                                <span>YouTubeThumbnail</span>
+                                <span>DeveloperDesign</span>
                             </div>
                         </div>
                     </div>
@@ -290,68 +505,43 @@
                     >
                         <div class="project-img">
                             <img
-                                src="https://images.unsplash.com/photo-1558655146-364adaf1fcc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80"
-                                alt="Web Design Project"
+                                src="assets/images/googletech.jpg"
+                                alt="Brand Identity Project"
                             />
                         </div>
                         <div class="project-info">
-                            <h3>TechStart Website</h3>
+                            <h3>Google tech thumbnail</h3>
                             <p>
-                                Responsive website design and UI/UX for a tech
-                                startup focusing on user engagement and
-                                conversion.
+                                Modern and dynamic YouTube thumbnail
+                                highlighting the latest Google tech updates.
                             </p>
                             <div class="project-tags">
-                                <span>UI/UX</span>
-                                <span>Web Design</span>
-                                <span>Responsive</span>
+                                <span>GoogleTech</span>
+                                <span>TechThumbnail</span>
+                                <span>YouTubeDesign</span>
                             </div>
                         </div>
                     </div>
                     <div
                         class="project-card"
-                        data-category="Social-Media-Poster-Design"
+                        data-category="Youtube-Thumbnail-Design"
                     >
                         <div class="project-img">
                             <img
-                                src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80"
-                                alt="Print Design Project"
+                                src="assets/images/nahid.jpg"
+                                alt="Brand Identity Project"
                             />
                         </div>
                         <div class="project-info">
-                            <h3>Art Gallery Catalog</h3>
+                            <h3>Mashup Song thumbnail</h3>
                             <p>
-                                Elegant print catalog for a contemporary art
-                                gallery featuring exhibition pieces and artist
-                                profiles.
+                                Vibrant YouTube thumbnail designed for energetic
+                                mashup songs.
                             </p>
                             <div class="project-tags">
-                                <span>Print Design</span>
-                                <span>Layout</span>
-                                <span>Typography</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="project-card"
-                        data-category="Social-Media-Carousel-Design"
-                    >
-                        <div class="project-img">
-                            <img
-                                src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1039&q=80"
-                                alt="Motion Graphics Project"
-                            />
-                        </div>
-                        <div class="project-info">
-                            <h3>Product Launch Animation</h3>
-                            <p>
-                                Animated explainer video and motion graphics for
-                                a new tech product launch campaign.
-                            </p>
-                            <div class="project-tags">
-                                <span>Motion Graphics</span>
-                                <span>Animation</span>
-                                <span>Video</span>
+                                <span>MashupSong</span>
+                                <span>MusicThumbnail</span>
+                                <span>YouTubeDesign</span>
                             </div>
                         </div>
                     </div>
@@ -361,42 +551,20 @@
                     >
                         <div class="project-img">
                             <img
-                                src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80"
+                                src="assets/images/website-banneri.jpg"
                                 alt="Brand Identity Project"
                             />
                         </div>
                         <div class="project-info">
-                            <h3>Cafe Noir Rebranding</h3>
+                            <h3>Website hero banner</h3>
                             <p>
-                                Complete rebranding for a boutique coffee shop
-                                including logo, menu design, and interior
-                                signage.
+                                Modern and clean hero banner design for a
+                                professional website.
                             </p>
                             <div class="project-tags">
-                                <span>Rebranding</span>
-                                <span>Logo</span>
-                                <span>Menu Design</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card" data-category="UI/UX-Design">
-                        <div class="project-img">
-                            <img
-                                src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                                alt="Web Design Project"
-                            />
-                        </div>
-                        <div class="project-info">
-                            <h3>E-commerce Platform</h3>
-                            <p>
-                                User-centered e-commerce website design with
-                                focus on intuitive navigation and seamless
-                                checkout process.
-                            </p>
-                            <div class="project-tags">
-                                <span>E-commerce</span>
-                                <span>UI/UX</span>
-                                <span>Web Design</span>
+                                <span>HeroBanner</span>
+                                <span>bannerads</span>
+                                <span>WebGraphics</span>
                             </div>
                         </div>
                     </div>
@@ -517,9 +685,7 @@
                 <div class="footer-content">
                     <div class="footer-about">
                         <h3>
-                            <a href="#" class="logo"
-                                >Amzad's<span>Portfolio</span></a
-                            >
+                            <a href="#" class="logo">Gfx<span>Amzad</span></a>
                         </h3>
                         <p>
                             Creating visually compelling designs that tell your
@@ -569,7 +735,7 @@
                     </div>
                 </div>
                 <div class="copyright">
-                    <p>&copy; 2025 Amzad'sPortfolio. All Rights Reserved.</p>
+                    <p>&copy; 2025 GfxAmzad. All Rights Reserved.</p>
                 </div>
             </div>
         </footer>
