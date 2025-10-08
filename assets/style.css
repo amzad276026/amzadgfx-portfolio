@@ -233,6 +233,8 @@ header.scrolled {
     cursor: pointer;
 }
 
+
+
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -243,6 +245,33 @@ header.scrolled {
     background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
 }
 
+.hero .srl-anim img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+    width: 50px;
+    animation: updown 1.5s ease-in-out 0.5s infinite alternate;
+    -webkit-animation: updown 1.5s ease-in-out 0.5s infinite alternate;
+    filter:blur(2px);
+    -webkit-filter:blur(2px);
+}
+@keyframes updown {
+    0%{
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+}    100%{
+        transform: translateY(12px);
+        -webkit-transform: translateY(12px);
+        -moz-transform: translateY(12px);
+        -ms-transform: translateY(12px);
+        -o-transform: translateY(12px);
+}
+    
+}
 .hero-content {
     max-width: 600px;
     z-index: 2;
