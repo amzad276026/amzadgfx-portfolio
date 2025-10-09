@@ -730,33 +730,6 @@ header.scrolled {
 .project-img {
     position: relative;
 }
-.project-img::before {
-    content: "";
-    display: block;
-    height: 9px;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.7);
-    position: absolute;
-    transform: rotate(45deg);
-    transform-origin: 0%;
-    left: -260px;
-    top: -50px;
-    -webkit-transform: rotate(45deg);
-    box-shadow: 0 0 10px #fff;
-    animation-name: shadeslide;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    animation-direction: alternate;
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-}
-@keyframes shadeslide {
-    100% {
-        left: 350px;
-    }
-}
 
 .project-img img {
     width: 100%;
