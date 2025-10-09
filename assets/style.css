@@ -815,7 +815,11 @@ header.scrolled {
     overflow: auto;
     animation: modalAppear 0.4s ease-out;
 }
-
+.modal-img {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
 .modal-image {
     width: 100%;
     height: auto;
@@ -886,12 +890,9 @@ header.scrolled {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(transparent, rgba(5, 5, 16, 0.534));
+    background: linear-gradient(to top, transparent, rgba(5, 5, 16, 0.226));
     padding: 20px;
     color: var(--text);
-    display: grid;
-    justify-content: center;
-    align-items: center;
 }
 
 .modal-caption h3 {
